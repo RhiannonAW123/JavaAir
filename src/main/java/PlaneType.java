@@ -2,7 +2,8 @@ public enum PlaneType {
 
     BOEING747(312,800),
     DREAMLINER787(400, 1000),
-    BOEING737(122,300);
+    BOEING737(122,300),
+    FIGHTERJET(2,20);
 
     private final int capacity;
     private final int totalWeight;
