@@ -7,6 +7,7 @@ import static org.junit.Assert.assertEquals;
 
 public class FlightTest {
     Flight flight;
+    Flight flight1;
     Pilot pilot;
     ArrayList<CabinCrew> cabinCrewMembers;
     CabinCrew cabinCrew1;
@@ -16,6 +17,8 @@ public class FlightTest {
     Passenger passenger2;
     Passenger passenger3;
     Plane plane;
+    Plane plane1;
+
 
     @Before
     public void before(){
@@ -81,6 +84,16 @@ public class FlightTest {
         flight.addPassenger(passenger2);
         flight.addPassenger(passenger3);
         assertEquals(2,flight.getPassengers());
+    }
+
+    @Test
+    public void seatNumberDecrease(){
+        plane1 = new Plane(PlaneType.DREAMLINER787);
+        flight1 = new Flight(pilot, cabinCrewMembers, passengers, plane1, "10:30", "Rome", "Aberdeen","RMO567");
+        flight1.addPassenger(passenger1);
+        flight1.addPassenger(passenger2);
+        flight1.addPassenger(passenger3);
+        assertEquals(397, flight1.getNumberOfRemainingSeats());
     }
 
 

@@ -63,4 +63,8 @@ public class Flight {
             return "Goodbye Fam";
         }
     }
+
+    public int getNumberOfRemainingSeats() {
+        return this.plane.getCapacity() - getPassengers();
+    }
 }
